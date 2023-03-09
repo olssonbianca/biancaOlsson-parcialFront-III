@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Casilla from './Casilla';
 import "./styles.css"
+import Tarjeta from './Tarjeta';
 
 
 
@@ -90,9 +91,12 @@ const Form = () => {
 
       {validacion && (
         <div>
-             <h2> Mi mascota se llama {values.mascota} </h2> 
-            <h4>y es de raza {values.raza}</h4>
+            <Tarjeta
+            mascota= {values.mascota}
+            raza = {values.raza}
+            ></Tarjeta>
         </div>
+ 
       )}
     </>
   );
